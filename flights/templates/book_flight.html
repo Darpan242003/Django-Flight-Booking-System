@@ -1,0 +1,45 @@
+{% extends "main.html" %}
+
+{% block content %}
+<center><h1>Book Flight</h1></center>
+
+<div class="card my-3 py-3 px-3 mx-auto" style="max-width: 800px;">
+    <form action="" method="POST">
+        <legend>Book Flight- {{ flight.airline }} ({{ flight.flight_number }})</legend>
+        {% csrf_token %}
+        {% comment %} <label for="">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="">Phone:</label>
+        <input type="number" name="phone" required><br>
+
+        <button type="submit">Confirm Booking</button> {% endcomment %}
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Enter Your Name" name='name'>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Enter Your Email Address" name='email'>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Phone</label>
+            <input type="phone" class="form-control" placeholder="Enter Your 10 digit phone number" name='phone'>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Confirm Booking</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+{% endblock content %}

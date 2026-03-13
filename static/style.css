@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* body{
+    background-color: #99c6f6;
+    background: linear-gradient(to bottom right, #99c6f6, #fff);
+    background-size: cover;
+} */
+
+/* html, body {
+} */
+
+body {
+    height: 100%;  
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #99c6f6, #fff);
+    /* background-repeat: no-repeat;
+    background-attachment: fixed; keeps it continuous while scrolling
+    background-size: cover; */
+}
+
+
+/* nav{
+    background-color: rgb(0, 0, 153);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    color: white;
+}
+
+.links a{
+    color: white;
+    text-decoration: none;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.links a:hover{
+    text-decoration: underline;
+    transition: 1.5s;
+} */
+ 

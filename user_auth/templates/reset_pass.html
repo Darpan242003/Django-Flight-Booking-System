@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+
+{% block content %}
+<center>
+    <div class="card my-3 py-3 px-3 mx-auto" style="max-width: 800px;">
+        <form action="" method="POST">
+            <legend>Reset Password</legend>
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label class="form-label">Old Password</label>
+                <input type="text" class="form-control" placeholder="Enter the Old Password" name='oldpassword'>
+            </div>
+            {% if empty %}
+                <h6 style="color:red">Cannot leave this field empty!! Enter the old password.</h6>
+            {% endif %}
+
+
+            <div class="mb-3">
+                <label class="form-label">New Password</label>
+                <input type="password" class="form-control" placeholder="Enter the New Password" name='newpassword'>
+            </div>
+            {% if notnew %}
+                <h6 style="color:red">Password Already Exits!! Enter a new password.</h6>
+            {% endif %}
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-success">Reset</button>
+            </div>
+        </form>
+    </div>
+</center>
+{% endblock content %}

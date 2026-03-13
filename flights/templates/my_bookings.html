@@ -1,0 +1,38 @@
+{% extends "main.html" %}
+
+{% block content %}
+{% comment %} {% for i in bookings %} {% endcomment %}
+{% comment %} <div>
+    <h2>{{ i.passenger_name }}</h2>
+    <h2>{{ i.passenger_email }}</h2>
+    <h2>{{ i.passenger_phone }}</h2>
+    <form action="{% url "cancel_booking" i.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">Cancel Booking</button>
+    </form>
+</div> {% endcomment %}
+
+
+<div class="container py-3">
+  {% for i in bookings %}
+    <div class="card my-3 mx-auto card border-primary" style="max-width: 800px;">
+      <div class="card-header">Featured</div>
+      <div class="card-body">
+        <h5 class="card-title">{{ i.passenger_name }}</h5>
+        <p>Email: {{ i.passenger_email }}</p>
+        <p>Contact: {{ i.passenger_phone }}</p>
+        {% comment %} <a href="{% url 'flight_details' flight.id %}" class="btn btn-primary">View Details</a> {% endcomment %}
+        <form action="{% url "cancel_booking" i.id %}" method="POST">
+        {% csrf_token %}
+        <button class="btn btn-danger" type="submit">Cancel Booking</button>
+    </form>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% comment %} {% endfor %} {% endcomment %}
+{% endblock content %}
+
+
+
+

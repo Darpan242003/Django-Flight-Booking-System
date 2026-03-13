@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+
+{% comment %} <center>
+    <section class="hero">
+        <h1>Welcome to SkyBooker</h1>
+        <p>Book your next flight easily and travel smart.</p>
+        <a href="{% url 'flights' %}" class="btn">Book a Flight</a>
+    </section>
+</center> {% endcomment %}
+
+
+
+
+<section class="py-5 text-center container"
+    style="height: 80vh; background: url('{% static "images/Airplane.webp" %}') center/cover;">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Welcome to FlightBooking.com</h1>
+            <p class="lead text-muted">Book, manage, and explore flights with ease.</p>
+            <p>
+                <a href="{% url 'flights' %}" class="btn btn-primary my-2">Find Flights</a>
+                
+                <a href="{% url 'my_bookings' %}" class="btn btn-outline-secondary my-2">My Bookings</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% comment %} {% for flight in booked_flight %}
+<div>
+    <h1>{{ flight. }}</h1>
+</div>
+{% endfor %} {% endcomment %}
+{% endblock content %}

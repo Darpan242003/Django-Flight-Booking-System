@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+
+<div class="container py-3">
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="From" aria-label="Search" name="from" />
+    <input class="form-control me-2" type="search" placeholder="To" aria-label="Search" name="to" />
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+  {% for flight in flights %}
+  <div class="card my-3 mx-auto" style="max-width: 480px;">
+    <div class="card-header">Featured</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ flight.airline }} - {{ flight.source }} to {{ flight.destination }}</h5>
+      <a href="{% url 'flight_details' flight.id %}" class="btn btn-primary">View Details</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+
+{% endblock content %}

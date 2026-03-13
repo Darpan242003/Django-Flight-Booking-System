@@ -1,0 +1,48 @@
+{% extends "main.html" %}
+
+{% block content %}
+<center>
+    {% comment %} <h1>Register Here</h1> {% endcomment %}
+    <div class="card my-3 py-3 px-3 mx-auto" style="max-width: 800px;">
+        <form action="" method="POST">
+            <legend>Register Here</legend>
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" placeholder="Enter Your First Name" name='first_name'>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" placeholder="Enter Your Last Name" name='last_name'>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Enter Your Email Address" name='email'>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" placeholder="Enter Your Username" name='username'>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" placeholder="Enter Your Password" name='password'>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" placeholder="Re-enter Your Password" name='confirm_password'>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </form>
+    </div>
+
+</center>
+{% endblock content %}

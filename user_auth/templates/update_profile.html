@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<center>
+    <div class="card my-3 py-3 px-3 mx-auto" style="max-width: 800px;">
+        <form action="" method="POST">
+            <legend>Update Profile</legend>
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" placeholder="Enter Your First Name" name='first_name' value={{user.first_name}}>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" placeholder="Enter Your Last Name" name='last_name' value={{user.last_name}}>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Enter Your Email Address" name='email' value={{user.email}}>
+            </div>
+            {% if notnew %}
+                <h6 style="color:red">Username Already Exits!! Create a new username.</h6>
+            {% endif %}
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" placeholder="Enter Your Username" name='username' value={{user.username}}>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+        </form>
+    </div>
+</center>
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+
+{% block content %}
+<center>
+    <div class="card my-3 py-3 px-3 mx-auto" style="max-width: 800px;">
+        <legend>Profile</legend>
+        <hr>
+        <p><b>User:</b> {{ request.user }}</p>
+        <p><b>Authenticated:</b> {{ request.user.is_authenticated }}</p>
+        <p><b>First Name:</b> {{ request.user.first_name }}</p>
+        <p><b>Last Name:</b> {{ request.user.last_name }}</p>
+        <p><b>Email:</b> {{ request.user.email }}</p>
+        <p><b>Username:</b> {{ request.user.username }}</p>
+        <hr>
+        <div class="btn-container">
+            <a class="btn btn-primary" href="{% url "update_profile" %}">Update Profile</a>
+            <a class="btn btn-success" href="{% url "reset_pass" %}">Reset Password</a>
+            <a class="btn btn-danger" href="{% url "logout" %}">Logout</a>
+        </div>
+    </div>
+</center>
+{% endblock content %}

@@ -1,0 +1,51 @@
+{% extends "main.html" %}
+
+{% block content %}
+<center><h1>Travel History</h1></center>
+<hr>
+{% comment %} <div>
+    <h2>Upcoming Journies</h2>
+    {% for i in bookings %}
+    <h3>{{ i.passenger_name }}</h3>
+    <h3>{{ i.passenger_email }}</h3>
+    <h3>{{ i.passenger_phone }}</h3>
+    <h3>{{ i.booking_date }}</h3>
+
+    {% endfor %}
+</div> {% endcomment %}
+
+<div class="container py-3">
+    <center><h2>Upcoming Journies</h2></center>
+    {% for i in bookings %}
+    <div class="card my-3 mx-auto card border-primary" style="max-width: 800px;">
+        <div class="card-header">Featured</div>
+        <div class="card-body">
+            <h5 class="card-title">{{ i.passenger_name }}</h5>
+            <p>Email: {{ i.passenger_email }}</p>
+            <p>Contact: {{ i.passenger_phone }}</p>
+            <h5 class="card-title">{{ i.booking_date }}</h5>
+            {% comment %} <a href="{% url 'flight_details' flight.id %}" class="btn btn-primary">View Details</a>
+            {% endcomment %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<hr>
+
+<div class="container py-3">
+    <center><h2>Cancelled Journies</h2></center>
+    {% for i in cancelled %}
+    <div class="card my-3 mx-auto card border-danger" style="max-width: 800px;">
+        <div class="card-header">Featured</div>
+        <div class="card-body">
+            <h5 class="card-title">{{ i.passenger_name }}</h5>
+            <p>Email: {{ i.passenger_email }}</p>
+            <p>Contact: {{ i.passenger_phone }}</p>
+            <h5 class="card-title">{{ i.booking_date }}</h5>
+            {% comment %} <a href="{% url 'flight_details' flight.id %}" class="btn btn-primary">View Details</a>
+            {% endcomment %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
