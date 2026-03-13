@@ -57,6 +57,14 @@ python manage.py migrate
 
 python manage.py runserver
 
+## Screenshots
+
+Login Page  
+<img width="1920" height="1040" alt="Flight Booking Home Page" src="https://github.com/user-attachments/assets/c036650c-3ab0-40c8-88af-ebaa7144e183" />
+Flight Search Page  
+Booking Confirmation Page
+
+
 ## Future Improvements
 
 - Integrate payment gateway
