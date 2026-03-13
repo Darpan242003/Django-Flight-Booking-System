@@ -61,9 +61,10 @@ python manage.py runserver
 
 Login Page  
 <img width="1920" height="1040" alt="Flight Booking Home Page" src="https://github.com/user-attachments/assets/c036650c-3ab0-40c8-88af-ebaa7144e183" />
-Flight Search Page  
+Flight Search Page 
+<img width="1920" height="872" alt="Flight Search Page" src="https://github.com/user-attachments/assets/35643ec9-726f-4f2c-af6a-6108dfcdd5e1" />
 Booking Confirmation Page
-
+<img width="1918" height="868" alt="Screenshot 2026-03-14 011203" src="https://github.com/user-attachments/assets/1653588c-e4d8-42f5-86b0-6954d3ca85ef" />
 
 ## Future Improvements
 
