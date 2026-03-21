@@ -29,7 +29,7 @@ flight-booking-system/
 │
 ├── flights/        # Flight management app
 ├── bookings/       # Booking and reservation logic
-├── users/          # Authentication system
+├── user_auth/      # Authentication system
 ├── templates/      # HTML templates
 ├── static/         # CSS and assets
 ├── db.sqlite3      # Database file
